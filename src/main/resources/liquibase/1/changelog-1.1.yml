@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Role table
+      author: Ramin Aliyev
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    remarks: id of roles
+              - column:
+                  name: name
+                  type: varchar(128)
+              - column:
+                  name: created_date_time
+                  type: varchar(128)
+              - column:
+                  name: update_date_time
+                  type: varchar(128)
+              - column:
+                  name: last_modified_date_time
+                  type: varchar(128)

@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create User table
+      author: Ramin Aliyev
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    remarks: id of mail
+              - column:
+                  name: name
+                  type: varchar(128)
+              - column:
+                  name: surname
+                  type: varchar(256)
+              - column:
+                  name: password
+                  type: varchar(256)
+              - column:
+                  name: age
+                  type: int
+              - column:
+                  name: created_date_time
+                  type: varchar(128)
+              - column:
+                  name: update_date_time
+                  type: varchar(128)
+              - column:
+                  name: last_modified_date_time
+                  type: varchar(128)
